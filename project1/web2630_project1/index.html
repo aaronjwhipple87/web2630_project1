@@ -12,17 +12,21 @@
     <div class="small-6 columns">
       <h1 class="text-center">PLAYER</h1>
       <div class="wins">
-        <div class="wins text-center" :style="{width: userWins + '0%'}" style="background-color: green; margin: 0; color: white;">
+        <div class="wins text-center" :style="{width: userWins + '0%'}" style="background-color: green; margin: 0; color: white;"
+            v-if="!showGame">
             {{userWins}}
         </div>
+          <div else></div>
       </div>
     </div>
     <div class="small-6 columns">
       <h1 class="text-center">COMPUTER</h1>
       <div class="wins">
-        <div class="wins text-center" :style="{width: compWins + '0%'}" style="background-color: green; margin: 0; color: white;">
+        <div class="wins text-center" :style="{width: compWins + '0%'}" style="background-color: green; margin: 0; color: white;"
+             v-if="!showGame">
             {{compWins}}
         </div>
+          <div else></div>
       </div>
     </div>
   </section>
@@ -40,7 +44,7 @@
     </div>
   </section>
   <section class="row log" v-show="!showGame">
-    <div class="small-12 columns">
+    <div class="small-12 columns" >
       <ul>
         <li v-for="result in resultLog" :class="{'player-turn': !result.compWin, 'computer-turn': result.compWin, 'tie-turn': result.tie}">
           {{result.text}}
