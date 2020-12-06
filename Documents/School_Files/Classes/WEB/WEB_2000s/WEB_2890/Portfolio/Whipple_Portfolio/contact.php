@@ -187,7 +187,7 @@ if(isset($_POST["submit"])){
 <footer id="footer" class="bg-secondary pt-5">
     <div class="container">
         <!-- section-title -->
-        <div class="row py-3 justify-content-center">
+        <div class="col-md-12 col-xs-12 col-sm-12 text-center">
             <img src="img/icon-white.png" class="footer-logo" alt="AW Logo">
         </div>
         <!-- end of section-title -->
